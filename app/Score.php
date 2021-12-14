@@ -16,6 +16,8 @@ class Score extends Model
         'value' => 'integer',
     ];
 
+    protected $hidden = array('game_id');
+
     public function game(): BelongsTo
     {
         $this->belongsTo(Game::class);

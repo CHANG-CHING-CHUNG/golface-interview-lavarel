@@ -12,9 +12,9 @@ class Game extends Model
         'startAt',
     ];
 
-    protected $casts = [
-        'startAt' => 'integer',
-    ];
+    // protected $casts = [
+    //     'startAt' => 'integer',
+    // ];
 
     public function scores(): HasMany
     {

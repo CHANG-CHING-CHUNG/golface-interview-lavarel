@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Game;
+use App\Score;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/game/all', 'GameTestController@index');
+
+Route::post('/game', 'GameTestController@store');
+
+Route::put('/game/{id}/scores','GameTestController@update');
