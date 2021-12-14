@@ -20,7 +20,6 @@ class GameTestController extends Controller
     }
 
     public function update(Request $request, $id) {
-        // $game = Game::select('id','title','startAt')->findOrFail($id);
         $data = $request->all();
         foreach($data as &$d) {
             $d['game_id'] = $id;
